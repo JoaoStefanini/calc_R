@@ -14,10 +14,13 @@ ui <- fluidPage(
       selectInput(
         "operation",
         "Operação:",
-        choices = c("Adição" = "add",
-                    "Subtração" = "sub",
-                    "Multiplicação" = "mul",
-                    "Divisão" = "div")
+        choices = c(
+          "Adição" = "add",
+          "Subtração" = "sub",
+          "Multiplicação" = "mul",
+          "Divisão" = "div",
+          "Potenciação" = "pow"
+        )
       ),
       actionButton("calc", "Calcular"),
       br(),
@@ -52,6 +55,8 @@ server <- function(input, output) {
           return("Erro: Divisão por zero!")
         }
         return(num1 / num2)
+      } else if (operation == "pow") {
+        return(num1 ^ num2)
       }
     })
   })
