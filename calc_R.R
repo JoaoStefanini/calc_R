@@ -5,6 +5,21 @@ library(shiny)
 
 # Define a interface do usuário (UI)
 ui <- fluidPage(
+  tags$style(HTML("
+    body {
+      background-color: black;
+      color: white;
+    }
+    .well {
+      background-color: #333;
+      color: white;
+    }
+    .btn {
+      background-color: #555;
+      color: white;
+      border-color: white;
+    }
+  ")),
   titlePanel("Calculadora Básica"),
   
   sidebarLayout(
@@ -68,5 +83,3 @@ server <- function(input, output) {
 
 # Rodar a aplicação Shiny
 shinyApp(ui = ui, server = server)
-
-#AAAAAAAAAAAAAAAAAAA
