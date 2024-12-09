@@ -1,5 +1,5 @@
 *.RData
-*.RHistory
+*.Rhistory
 # Ignorar arquivos temporários do sistema
 *.log
 *.tmp
